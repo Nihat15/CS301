@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <script>
+        function addUser() {
+            // Get form values
+            var username = document.getElementById('username').value;
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+            var university = document.getElementById('university').value;
+            var city = document.getElementById('city').value;
+            var file = document.getElementById('file').value;
+            var gender = document.querySelector('input[name="gender"]:checked').value;
+
+            // Display values in console
+            console.log('Username: ' + username);
+            console.log('Email: ' + email);
+            console.log('Password: ' + password);
+            console.log('University: ' + university);
+            console.log('City: ' + city);
+            console.log('File: ' + file);
+            console.log('Gender: ' + gender);
+
+            // Redirect to About Us page
+            window.location.href = 'about_us.html';
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br>
+
+        <label for="university">University:</label>
+        <select id="university" name="university" required>
+            <option value="university1">UFAZ</option>
+            <option value="university2">ASOIU</option>
+            <!-- Add more options as needed -->
+        </select><br>
+
+        <label for="city">City:</label>
+        <select id="city" name="city" required>
+            <option value="city1">BAKU</option>
+            <option value="city2">NAXCIVANj</option>
+            <!-- Add more options as needed -->
+        </select><br>
+
+        <label for="file">Choose File:</label>
+        <input type="file" id="file" name="file" accept=".txt, .pdf, .doc"><br>
+
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female" required>
+        <label for="female">Female</label><br>
+
+        <button type="button" onclick="addUser()">Add User</button>
+    </form>
+</body>
+</html>
